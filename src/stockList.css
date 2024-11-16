@@ -1,0 +1,53 @@
+/* .stock-item {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .stock-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .profit {
+    color: green;
+  }
+  
+  .loss {
+    color: red;
+  } */
+
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%; 
+  margin-top: 1rem; 
+  text-align: left;
+}
+
+.stock-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  width: 100%; 
+  margin-bottom: 10px; 
+}
+
+.stock-item p {
+  margin: 0.5rem 0;
+}
+
+.profit {
+  color: green;
+}
+
+.loss {
+  color: red;
+}
+
+.no-stock {
+  color: gray;
+  text-align: left; 
+  width: 100%; 
+  margin-top: 1rem; 
+  font-size: 1.1rem;
+}

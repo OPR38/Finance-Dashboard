@@ -19,6 +19,8 @@ body {
   .error {
     color: red;
     margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
   }
 
 .form-row {
@@ -36,6 +38,7 @@ body {
     border-radius: 4px;
     font-size: 20px;
     background-color: aliceblue;
+    color: black;
     min-width: 150px;
   }
 
@@ -56,14 +59,14 @@ body {
 
   @media (max-width: 600px) {
     .form-row {
-        flex-direction: column;  /* Stack elements vertically when screen is smaller than 600px */
-        gap: 15px;  /* Add space between stacked items */
-        align-items:stretch  /* Make inputs and buttons stretch to full width */
+        flex-direction: column; 
+        gap: 15px;  
+        align-items:stretch 
     }
     
     .form-row input,
     .form-row button {
-        width: 100%;  /* Ensure the input fields and buttons take up full width when stacked */
-        min-width: unset;  /* Remove min-width constraint in stacked view */
+        width: 100%;  
+        min-width: unset;  
     }
 }

@@ -1,5 +1,27 @@
+// import React, { useState } from "react";
+// import StockForm from "./StockForm";
+// import StockList from "./StockList";
+// import { StockProvider } from "./StockContext";
+// import "./App.css";
+
+// const App = () => {
+//   return (
+//     <StockProvider>
+//       <div>
+//         <h1>Finance Dashboard</h1>
+//         <StockForm />
+//         <StockList />
+//       </div>
+//     </StockProvider>
+//   );
+// };
+
+// export default App;
+
 import React, { useState } from "react";
 import StockForm from "./StockForm";
+import StockList from "./StockList";
+import "./App.css";
 
 const App = () => {
   const [stocks, setStocks] = useState([]);
@@ -12,13 +34,14 @@ const App = () => {
     <div>
       <h1>Finance Dashboard</h1>
       <StockForm addStock={addStock} />
-      <ul>
-        {stocks.map((stock, index) => (
-          <li key={index}>
-            {stock.symbol} - {stock.quantity} shares @ ${stock.price}/share
-          </li>
-        ))}
-      </ul>
+      <h2>Stock List</h2>
+      <div className="stock-list-container">
+      {stocks.length > 0 ? (
+        <StockList stocks={stocks} />
+      ) : (
+        <p>No stock added yet.</p>
+      )}
+      </div>
     </div>
   );
 };
