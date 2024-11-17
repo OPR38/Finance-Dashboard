@@ -9,9 +9,7 @@ export const StockProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // const apiKey = '1d75347365e81372a68effe4';
-  // const apiKey = 'demo'; 
-  const apiKey = '0LJLM45N47PJRYRU';
+  const apiKey = 'TQ918BCXJSKR5297'; 
   const baseUrl = 'https://www.alphavantage.co/query';
 
   const fetchStockPrice = useCallback(async (symbol) => {
