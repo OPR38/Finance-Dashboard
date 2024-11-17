@@ -12,7 +12,7 @@ const StockList = ({ stocks }) => {
           `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=TQ918BCXJSKR5297`
         );
       const data = await response.json();
-        console.log('test123');
+
       if (data['Global Quote'] && data['Global Quote']['05. price']) {
         const price = parseFloat(data['Global Quote']['05. price']);
         setStockPrices((prevPrices) => ({

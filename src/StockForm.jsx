@@ -24,10 +24,6 @@ const StockForm = ({ addStock }) => {
             `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${symbol}&apikey=TQ918BCXJSKR5297`
           );
           const data = await response.json();
-          
-          console.log("API Response:", data);
-          console.log("TEST1:", data.bestMatches);
-          console.log("TEST2:", data.bestMatches.length);
 
       if (data.bestMatches && data.bestMatches.length > 0) {
         const validSymbol = data.bestMatches[0]["1. symbol"];
